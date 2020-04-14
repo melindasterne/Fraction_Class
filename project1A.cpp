@@ -5,11 +5,11 @@ class Fraction
 		int denominator;
 	public:
 		void set(int, int);
-		void print(Fraction) const;
-		int addedTo(Fraction) const;
-		int subtract(Fraction) const;
-		int multipliedBy(Fraction) const;
-		int dividedBy(Fraction) const;
+		void print() const;
+		int addedTo(Fraction);
+		int subtract(Fraction);
+		int multipliedBy(Fraction);
+		int dividedBy(Fraction);
 		bool isEqualTo(Fraction) const;
 };
 
@@ -91,7 +91,7 @@ void Fraction::set(int num, int den)
 }
 
 
-void Fraction::print(Fraction fractionVar) const
+void Fraction::print() const
 //Pre: The argument has been initialized
 //Post: The numerater and denominator have been printed to the console
 {
@@ -99,7 +99,7 @@ void Fraction::print(Fraction fractionVar) const
 }
 
 
-int Fraction::addedTo(Fraction fractionVar) const
+int Fraction::addedTo(Fraction fractionVar)
 //Pre: Both arguments have been initialized
 //Post: sum of two arguments is returned
 {
@@ -111,7 +111,7 @@ int Fraction::addedTo(Fraction fractionVar) const
 }
 
 
-int Fraction::subtract(Fraction fractionVar) const
+int Fraction::subtract(Fraction fractionVar)
 //Pre: Both arguments have been initialized
 //Post: the result of one argument subtracted from the other is returned
 {
@@ -123,29 +123,29 @@ int Fraction::subtract(Fraction fractionVar) const
 }
 
 
-int Fraction::multipliedBy(Fraction fractionVar) const
+int Fraction::multipliedBy(Fraction fractionVar)
 //Pre: Both arguments have been initialized
 //Post: the product of two arguments is returned
 {
 	Fraction product;
-	product.numerator = numerator * fractionVar.numberator;
+	product.numerator = numerator * fractionVar.numerator;
 	product.denominator = denominator * fractionVar.denominator;
 
 	return product;
 }
 
 
-int Fraction::dividedBy(Fraction fractionVar) const
+int Fraction::dividedBy(Fraction fractionVar)
 //Pre: Both arguments have been initialized
 //Post: sum of two arguments is returned
 {
 	Fraction quotient;
-	quotient.numerator = numerator + fractionVar.numberator;
+	quotient.numerator = numerator + fractionVar.numerator;
 	quotient.denominator = denominator + fractionVar.denominator;
 
 	return quotient;
 }
-bool Fraction::isEqualTo(Fraction fractionVar1, Fraction FractionVar2) const
+bool Fraction::isEqualTo(Fraction fractionVar1, Fraction fractionVar2) const
 //Pre: Both arguments have been initialized
 //Post: true is returned if the arguments are equal
 {
