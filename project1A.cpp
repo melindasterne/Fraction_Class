@@ -5,6 +5,7 @@ class Fraction
 		int denominator;
 	public:
 		void set(int, int);
+		void print(Fraction) const;
 		int addedTo(Fraction) const;
 		int subtract(Fraction) const;
 		int multipliedBy(Fraction) const;
@@ -87,6 +88,14 @@ void Fraction::set(int num, int den)
 	numerator = num;
 	denominator = den;
 
+}
+
+
+void Fraction::print(Fraction fractionVar) const
+//Pre: The argument has been initialized
+//Post: The numerater and denominator have been printed to the console
+{
+	cout << fractionVar.numerator << "/" << fractionVar.denominator;
 }
 
 
