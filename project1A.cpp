@@ -95,11 +95,11 @@ void Fraction::print() const
 //Pre: The argument has been initialized
 //Post: The numerater and denominator have been printed to the console
 {
-	cout << fractionVar.numerator << "/" << fractionVar.denominator;
+	cout << numerator << "/" << denominator;
 }
 
 
-int Fraction::addedTo(Fraction fractionVar)
+Fraction Fraction::addedTo(Fraction fractionVar)
 //Pre: Both arguments have been initialized
 //Post: sum of two arguments is returned
 {
@@ -111,7 +111,7 @@ int Fraction::addedTo(Fraction fractionVar)
 }
 
 
-int Fraction::subtract(Fraction fractionVar)
+Fraction Fraction::subtract(Fraction fractionVar)
 //Pre: Both arguments have been initialized
 //Post: the result of one argument subtracted from the other is returned
 {
@@ -123,7 +123,7 @@ int Fraction::subtract(Fraction fractionVar)
 }
 
 
-int Fraction::multipliedBy(Fraction fractionVar)
+Fraction Fraction::multipliedBy(Fraction fractionVar)
 //Pre: Both arguments have been initialized
 //Post: the product of two arguments is returned
 {
@@ -135,7 +135,7 @@ int Fraction::multipliedBy(Fraction fractionVar)
 }
 
 
-int Fraction::dividedBy(Fraction fractionVar)
+Fraction Fraction::dividedBy(Fraction fractionVar)
 //Pre: Both arguments have been initialized
 //Post: sum of two arguments is returned
 {
